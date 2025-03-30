@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 3</title>
+    <style>
+        body{
+            background-color:black;
+        }
+        #conteudo{
+            width:600px;
+            height:500px;
+            background-color:white;
+            border-radius:8px;
+            margin:auto;
+        }
+        h1{
+            text-align:Center;
+            color:orangered;
+        }
+        #submit-1{
+            background-color:red;
+            color:white;
+        }
+        #submit-2{
+            background-color:red;
+            color:white;
+        }
+        #msg{
+            color:red;
+            text-align:Center;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteudo">
+        <h1>Contador De Cliques</h1>
+        <input type="submit" value="Clique Aqui para adicionar o Clique" id="submit-1" onclick="contador()">
+        <input type="submit" value="Cliqe Aqui Para Resetar O Contador" id="submit-2" onclick="resetar()">
+        <p id="msg"></p>
+    </div>
+
+    <script>
+        let cont=0;
+        const msg=document.getElementById('msg');
+        function contador(){
+            cont=cont+1;
+            msg.innerHTML=`Você clicou ${cont} vezes`
+        }
+        function resetar(){
+            msg.innerHTML=''
+            cont=0;
+        }
+    </script>
+</body>
+</html>

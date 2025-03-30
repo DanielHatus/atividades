@@ -1,0 +1,33 @@
+/* Definição do estilo para o corpo da página */
+body {
+    background-color: orangered; /* Define a cor de fundo da página como 'orangered', uma cor alaranjada com um tom avermelhado */
+}
+
+/* Estilo para o título h1 */
+h1 {
+    color: white; /* Define a cor do texto do título como branco */
+    text-align: center; /* Alinha o título ao centro da página */
+}
+
+/* Estilo para a div com id 'conteudo' */
+#conteudo {
+    width: 610px; /* Define a largura da div 'conteudo' como 610px */
+    height: 500px; /* Define a altura da div 'conteudo' como 500px */
+    background-color: white; /* Define o fundo da div 'conteudo' como branco */
+    border-radius: 8px; /* Aplica bordas arredondadas com raio de 8px */
+    margin: auto; /* Faz a div 'conteudo' ficar centralizada horizontalmente na página */
+}
+
+/* Estilo para o botão com id 'calcular' */
+#calcular {
+    display: block; /* Faz o botão ser exibido como um bloco, ocupando toda a linha */
+    margin: auto; /* Centraliza o botão horizontalmente na página */
+    background-color: orangered; /* Define a cor de fundo do botão como 'orangered' */
+    color: white; /* Define a cor do texto do botão como branco */
+}
+
+/* Estilo para a mensagem com id 'msg' */
+#msg {
+    text-align: center; /* Alinha o texto dentro do parágrafo 'msg' ao centro */
+    font-size: 20px; /* Define o tamanho da fonte da mensagem como 20px */
+}

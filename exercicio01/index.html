@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<!-- Define o documento como HTML5 -->
+<html lang="pt-br"> 
+<!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>exercício 1</title> 
+    <!-- Define o título da página que aparece na aba do navegador -->
+
+    <style>
+    /* Estilizando o corpo da página */
+    body {
+        background-color: blue; /* Define o fundo da página como azul */
+    }
+
+    /* Estilizando o título */
+    h1 {
+        text-align: center; /* Centraliza o título */
+        color: white; /* Define a cor do texto como branco */
+    }
+
+    /* Estilizando a área de conteúdo */
+    #conteudo {
+        margin: auto; /* Centraliza a div na tela */
+        width: 600px; /* Define a largura do bloco */
+        height: 500px; /* Define a altura do bloco */
+        background-color: white; /* Define o fundo branco */
+        border-radius: 8px; /* Arredonda as bordas */
+    }
+
+    /* Estilizando o botão */
+    #enviar {
+        display: block; /* Faz o botão ocupar toda a linha */
+        margin: auto; /* Centraliza o botão horizontalmente */
+        background-color: blue; /* Define a cor do botão como azul */
+        color: white; /* Define a cor do texto do botão como branco */
+    }
+
+    /* Estilizando a mensagem */
+    #msg {
+        text-align: center; /* Centraliza o texto */
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Este exercício tem como objetivo receber 2 valores numéricos e exibir a soma entre eles -->
+
+    <h1>Somando Valores</h1> 
+    <!-- Título principal da página -->
+
+    <div id="conteudo"> 
+        <!-- Área onde os inputs e o resultado da soma serão exibidos -->
+
+        <p>Digite O Primeiro Número: <input type="number" name="n1" id="n1"></p> 
+        <!-- Campo de entrada para o primeiro número -->
+
+        <p>Digite O Segundo Número: <input type="number" name="n2" id="n2"></p> 
+        <!-- Campo de entrada para o segundo número -->
+
+        <input onclick="soma()" id="enviar" type="submit" value="Somar Os valores">
+        <!-- Botão que chama a função 'soma()' ao ser clicado -->
+
+        <p id="msg"></p> 
+        <!-- Parágrafo onde será exibido o resultado da soma -->
+    </div>
+
+    <script>
+    function soma() {
+        let n1string = document.getElementById('n1').value; 
+        // Obtém o valor do primeiro campo de entrada
+        
+        let n2string = document.getElementById('n2').value; 
+        // Obtém o valor do segundo campo de entrada
+
+        let msg = document.getElementById('msg'); 
+        // Seleciona o parágrafo onde o resultado será exibido
+
+        let n1 = Number(n1string); 
+        // Converte o valor do primeiro campo para um número
+
+        let n2 = Number(n2string); 
+        // Converte o valor do segundo campo para um número
+
+        let res = n1 + n2; 
+        // Calcula a soma dos dois valores
+
+        msg.style.color = 'blue'; 
+        // Define a cor do texto do resultado como azul
+
+        msg.innerHTML = `A Soma De ${n1} + ${n2} = ${res}`; 
+        // Exibe a soma dentro do parágrafo com o id "msg"
+    }
+    </script>
+</body>
+</html>

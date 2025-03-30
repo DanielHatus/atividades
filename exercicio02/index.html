@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 2</title>
+    <!-- Define o título da aba do navegador -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Link para o arquivo CSS externo, onde você pode definir os estilos da página -->
+    <!-- (não se esqueça de criar um arquivo "estilo.css" com os estilos desejados) -->
+</head>
+<body>
+
+    <h1>Calculando A Média De Duas notas De Um Aluno</h1>
+    <!-- Exibe o título principal da página, destacando o objetivo: calcular a média de duas notas -->
+
+    <div id="conteudo">
+        <!-- Cria uma div (área) que agrupa todos os elementos relacionados ao cálculo da média -->
+        
+        <p>Digite O Seu Nome: <input type="text" name="nome" id="nome"></p>
+        <!-- Campo de entrada para o nome do aluno. O id="nome" será usado para acessar o valor no JavaScript -->
+        
+        <p>Digite A Primeira Nota: <input type="number" name="n1" id="n1"></p>
+        <!-- Campo de entrada para a primeira nota. O id="n1" será usado para acessar o valor no JavaScript -->
+        
+        <p>Digite A Segunda Nota: <input type="number" name="n2" id="n2"></p>
+        <!-- Campo de entrada para a segunda nota. O id="n2" será usado para acessar o valor no JavaScript -->
+        
+        <input type="submit" value="Calcular Média" id="calcular" onclick="calcular()">
+        <!-- Botão de envio. Ao ser clicado, chama a função "calcular()" para processar o cálculo da média -->
+        
+        <p id="msg"></p>
+        <!-- Parágrafo vazio onde a mensagem com o resultado será exibida -->
+    </div>
+
+    <script>
+        // Função para calcular a média das notas
+        function calcular(){
+            // Pega o valor do nome digitado pelo usuário no campo de entrada
+            const nome = document.getElementById('nome').value;
+            
+            // Pega os valores das notas digitadas pelo usuário nos campos de entrada
+            const n1string = document.getElementById('n1').value;
+            const n2string = document.getElementById('n2').value;
+
+            // Converte as notas de string para número, para poder realizar o cálculo
+            const n1 = Number(n1string);
+            const n2 = Number(n2string);
+
+            // Calcula a média das notas
+            const med = (n1 + n2) / 2;
+            //o parenteses serve para dizer ao computador que quero que a soma aconteça primeiro.
+
+            // Seleciona o elemento "msg" onde a mensagem será exibida
+            const mensagem = document.getElementById('msg');
+            
+            // Muda a cor do texto da mensagem para vermelho
+            mensagem.style.color = 'red';
+            
+            // Exibe a mensagem com a média calculada e o nome do aluno. O método toFixed(1) arredonda o resultado para 1 casa decimal.
+            mensagem.innerHTML = `Com a primeira nota sendo ${n1} e a segunda ${n2}, a média de ${nome} é ${med.toFixed(1)}`;
+        }
+    </script>
+</body>
+</html>
