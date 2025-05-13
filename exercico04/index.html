@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 4</title>
+    <style>
+        body{
+            background-color:rgb(218, 218, 11);
+        }
+        html{
+            font-size:16px;
+        }
+        main{
+            border:2px solid black;
+            outline:2px solid orangered;
+            width:50vw;
+            height:76vh;
+            background-color:white;
+            margin:auto;
+            border-radius:8px;
+        }
+        main>h1{
+            text-align:center;
+            font-size:2rem;
+            color:orangered;
+            border:3px solid orange;
+            background-color:black;
+            width:47%;
+            margin-left:155px;
+        }
+        #dados-inseridos{
+            display:flex;
+            justify-content:start;
+            flex-direction:row;
+            flex-wrap:nowrap;
+        }
+        #input{
+        border:1px solid black;
+        outline:2px solid orangered;
+        border-radius:6px;
+        margin-left:5px;
+        }
+        #label-input{
+            font-size:1.3rem
+        }
+        #msg{
+            text-align:center;
+            font-size: 1.8rem;
+        }
+        #button{
+            display: block;
+            margin:auto;
+            color:black;
+            background-color:orangered;
+            border:2px solid black;
+            border-radius:8px;
+        }
+        #button:hover{
+            color:orangered;
+            background-color:black;
+            border:2px solid orangered;
+        }
+        img{
+            display:none;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <!--este exercício tem como objetivo checar se uma pessoa está cima do limite de velocidade(30 KM/H) 
+    e caso esteja acima exiba uma mensagem demonstrando a velocidade que o usuario está, quanto ultrapassou do limite e uma mensagem de parabéns caso esteja no limite permitido.-->
+    <main>
+      <h1>Limite De Velocidade</h1>
+      <div id="dados-inseridos">
+        <label for="input" id="label-input">Insira Sua Velocidade em Km/h:</label>
+        <input type="number" name="" id="input">
+      </div>
+      <br>
+        <button onclick="checar_velocidade()" id="button">Enviar Resultado</button>
+      <p id="msg"></p>
+      <img id="imagem" src="" alt="" width="500" height="205">
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>
